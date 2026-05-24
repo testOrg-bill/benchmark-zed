@@ -4,9 +4,9 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  depot-remote-cache:
-    name: Depot with Remote Cache
-    runs-on: depot-ubuntu-24.04-4
+  monkci-remote-cache:
+    name: Monk CI with Remote Cache
+    runs-on: monkci-ubuntu-24.04-4
     defaults:
       run:
         working-directory: upstream
@@ -21,9 +21,9 @@ jobs:
       - run: ./script/linux # Install Dependencies
       - run: cargo build --release
 
-  depot-cacheless:
-    name: Depot Cacheless
-    runs-on: depot-ubuntu-24.04-4
+  monkci-cacheless:
+    name: Monk CI Cacheless
+    runs-on: monkci-ubuntu-24.04-4
     defaults:
       run:
         working-directory: upstream
